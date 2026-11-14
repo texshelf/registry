@@ -1,0 +1,35 @@
+schema = 1
+
+[template]
+name = "book"
+version = "1.0.0"
+engine = "latex"
+title = "Plain book"
+description = "A book with a title page, contents, preface, two chapters in their own files and a bibliography."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+keywords = ["chapters", "manuscript", "starter"]
+categories = ["book"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "5ad42658139c3c2f55aae3996e003a64560b7abc"
+path = "book"
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"
+
+[variables.title]
+prompt = "Title"
+default = "An Example Book"
+files = ["main.tex"]
+
+[variables.author]
+prompt = "Author"
+default = "A. U. Thor"
+files = ["main.tex"]
+
+[registry]
+official = true

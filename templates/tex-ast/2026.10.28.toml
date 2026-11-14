@@ -10,6 +10,7 @@ authors = ["Juan José Sánchez Medina"]
 license = "LPPL-1.3c"
 keywords = ["astronomy", "aastex", "informe", "uc", "español"]
 categories = ["lab-report", "report"]
+universities = ["UC Chile"]
 entrypoint = "Main.tex"
 
 [source]

@@ -1,7 +1,7 @@
 schema = 1
 
 [template]
-name = "typ-notes"
+name = "notes-typst"
 version = "1.0.0"
 engine = "typst"
 title = "Lecture notes (Typst)"
@@ -14,8 +14,11 @@ entrypoint = "main.typ"
 
 [source]
 repo = "https://github.com/texshelf/templates"
-rev = "d51b3c80e8db9b47edb62429e29587bd29ddb3d4"
-path = "typ-notes"
+rev = "5ad42658139c3c2f55aae3996e003a64560b7abc"
+path = "notes-typst"
+
+[typst]
+compiler = "0.11.0"
 
 [variables.course]
 prompt = "Course name"

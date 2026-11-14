@@ -25,7 +25,13 @@ edited, so a project created last month can be recreated exactly.
 
 ## What CI does
 
-On a pull request, `check.yml` validates every manifest, then fetches and
+On a pull request and on every push to `main`, `audit.yml` scans the template
+files for risky content without compiling them: compiled programs, scripts,
+shell commands, paths outside the template folder and leaked keys. A serious
+finding fails the run. The result is also stored with each built version and
+shown on the template's page, with a link to the full log.
+
+On a pull request, `check.yml` also validates every manifest, then fetches and
 compiles the templates the pull request touches, in a full TeX Live container
 with shell-escape off. The PDFs and thumbnails are uploaded as an artifact for
 review. Pull requests from forks run without secrets.
@@ -42,7 +48,7 @@ The first templates were imported to give the tooling something real to work
 on: a CV, a résumé, a preprint, a homework sheet, a poster, a thesis, three
 Typst templates from the Typst team, and the TeX-AST lab report. Each one
 credits its authors and keeps its license. The `article`, `slides`, `letter`,
-`typ-article` and `typ-notes` templates are maintained in
+`book`, `article-typst` and `notes-typst` templates are maintained in
 [texshelf/templates](https://github.com/texshelf/templates).
 
 If you are the author of an imported template and want it changed or removed,

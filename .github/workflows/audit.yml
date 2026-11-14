@@ -1,0 +1,59 @@
+name: Audit
+
+on:
+  pull_request:
+    paths: ["templates/**"]
+  push:
+    branches: [main]
+    paths: ["templates/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: audit-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Find the current texshelf commit
+        id: tool
+        run: echo "sha=$(git ls-remote https://github.com/texshelf/texshelf HEAD | cut -f1)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore texshelf-registry
+        id: tool-cache
+        uses: actions/cache@v4
+        with:
+          path: tool
+          key: texshelf-registry-audit-${{ steps.tool.outputs.sha }}
+
+      - name: Build texshelf-registry
+        if: steps.tool-cache.outputs.cache-hit != 'true'
+        run: cargo install --locked --git https://github.com/texshelf/texshelf --root tool texshelf-registry
+
+      - name: Audit the templates this pull request touches
+        if: github.event_name == 'pull_request'
+        run: |
+          names=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- templates | cut -d/ -f2 | sort -u)
+          only=""
+          for name in $names; do
+            [ -d "templates/$name" ] && only="$only --only $name"
+          done
+          if [ -z "$only" ]; then
+            echo "No template changed."
+            exit 0
+          fi
+          tool/bin/texshelf-registry audit --registry . $only
+
+      - name: Audit every template
+        if: github.event_name != 'pull_request'
+        run: tool/bin/texshelf-registry audit --registry .

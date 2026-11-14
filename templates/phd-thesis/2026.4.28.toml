@@ -10,6 +10,7 @@ authors = ["Krishna Kumar"]
 license = "MIT"
 keywords = ["dissertation", "cambridge", "cued"]
 categories = ["thesis"]
+universities = ["University of Cambridge"]
 entrypoint = "thesis.tex"
 
 [source]

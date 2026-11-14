@@ -17,3 +17,6 @@ universe = "unequivocal-ams"
 repo = "https://github.com/typst/templates"
 rev = "71b01c6b0a828649c7a0a38e8167cd82aab76efc"
 path = "unequivocal-ams/template"
+
+[typst]
+compiler = "0.12.0"

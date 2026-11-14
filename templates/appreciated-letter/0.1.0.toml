@@ -17,3 +17,6 @@ universe = "appreciated-letter"
 repo = "https://github.com/typst/templates"
 rev = "71b01c6b0a828649c7a0a38e8167cd82aab76efc"
 path = "appreciated-letter/template"
+
+[typst]
+compiler = "0.6.0"

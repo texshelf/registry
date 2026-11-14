@@ -18,6 +18,9 @@ repo = "https://github.com/typst/templates"
 rev = "71b01c6b0a828649c7a0a38e8167cd82aab76efc"
 path = "charged-ieee/template"
 
+[typst]
+compiler = "0.12.0"
+
 [variables.title]
 prompt = "Title"
 default = "A Typesetting System to Untangle the Scientific Writing Process"

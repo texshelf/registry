@@ -1,0 +1,23 @@
+schema = 1
+
+[template]
+name = "wonderous-book"
+version = "0.1.2"
+engine = "typst"
+title = "Fiction book (Typst)"
+description = "A paperback-style book for novels and long prose, with a title page, chapters and running headers."
+authors = ["Typst GmbH"]
+license = "MIT-0"
+repository = "https://github.com/typst/templates"
+keywords = ["novel", "fiction", "paperback", "chapters"]
+categories = ["book"]
+entrypoint = "main.typ"
+universe = "wonderous-book"
+
+[source]
+repo = "https://github.com/typst/templates"
+rev = "71b01c6b0a828649c7a0a38e8167cd82aab76efc"
+path = "wonderous-book/template"
+
+[typst]
+compiler = "0.12.0"
