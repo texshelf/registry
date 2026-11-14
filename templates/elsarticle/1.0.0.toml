@@ -1,0 +1,30 @@
+schema = 1
+
+[template]
+name = "elsarticle"
+version = "1.0.0"
+engine = "latex"
+title = "Elsevier article"
+description = "Manuscript for Elsevier journals using the elsarticle class, with front matter and numbered references."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+keywords = ["elsevier", "sciencedirect", "preprint"]
+categories = ["journal", "article"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "4f8e2ab5a6e364aeed4227246326690254c3a7df"
+path = "elsarticle"
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"
+
+[variables.title]
+prompt = "Title"
+default = "An Example Title"
+files = ["main.tex"]
+
+[registry]
+official = true

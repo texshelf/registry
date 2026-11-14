@@ -1,0 +1,25 @@
+schema = 1
+
+[template]
+name = "osuc-ayudantia"
+version = "2026.9.17"
+engine = "latex"
+title = "Ayudantía UC"
+description = "Problem sheets and solutions for teaching-assistant sessions at UC Chile. In Spanish."
+authors = ["Open Source UC"]
+license = "MIT"
+repository = "https://github.com/open-source-uc/latex-templates"
+keywords = ["ayudantia", "problemas", "pauta", "puc", "osuc"]
+categories = ["homework"]
+universities = ["UC Chile"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/open-source-uc/latex-templates"
+rev = "d1a013b291587fe566cfd299ae8ad1f3fc6ed12a"
+path = "templates/ayudantias_ivl"
+exclude = ["ayudantias_ivl.jpg"]
+
+[latex]
+compiler = "pdflatex"
+bib = "none"

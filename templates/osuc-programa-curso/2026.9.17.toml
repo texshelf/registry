@@ -1,0 +1,25 @@
+schema = 1
+
+[template]
+name = "osuc-programa-curso"
+version = "2026.9.17"
+engine = "latex"
+title = "Programa de curso UC"
+description = "Course syllabus in the UC Chile format. In Spanish."
+authors = ["Open Source UC"]
+license = "MIT"
+repository = "https://github.com/open-source-uc/latex-templates"
+keywords = ["programa", "curso", "syllabus", "puc", "osuc"]
+categories = ["other"]
+universities = ["UC Chile"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/open-source-uc/latex-templates"
+rev = "d1a013b291587fe566cfd299ae8ad1f3fc6ed12a"
+path = "templates/plantillas-programas-cursos"
+exclude = []
+
+[latex]
+compiler = "pdflatex"
+bib = "none"

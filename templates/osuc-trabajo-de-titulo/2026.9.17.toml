@@ -1,0 +1,25 @@
+schema = 1
+
+[template]
+name = "osuc-trabajo-de-titulo"
+version = "2026.9.17"
+engine = "latex"
+title = "Trabajo de Título UC"
+description = "Degree project (trabajo de título) for UC Chile, with dedication, acknowledgements, abstract and appendices. In Spanish."
+authors = ["Open Source UC"]
+license = "MIT"
+repository = "https://github.com/open-source-uc/latex-templates"
+keywords = ["titulo", "memoria", "tesis", "puc", "osuc"]
+categories = ["thesis"]
+universities = ["UC Chile"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/open-source-uc/latex-templates"
+rev = "d1a013b291587fe566cfd299ae8ad1f3fc6ed12a"
+path = "templates/plantilla-trabajo-de-titulo"
+exclude = []
+
+[latex]
+compiler = "pdflatex"
+bib = "biber"

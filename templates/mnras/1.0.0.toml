@@ -1,0 +1,30 @@
+schema = 1
+
+[template]
+name = "mnras"
+version = "1.0.0"
+engine = "latex"
+title = "MNRAS paper"
+description = "Paper for Monthly Notices of the Royal Astronomical Society using the mnras class from your TeX distribution."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+keywords = ["royal astronomical society", "astronomy", "astrophysics", "oup"]
+categories = ["journal", "article"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "4f8e2ab5a6e364aeed4227246326690254c3a7df"
+path = "mnras"
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"
+
+[variables.title]
+prompt = "Title"
+default = "An Example Title"
+files = ["main.tex"]
+
+[registry]
+official = true

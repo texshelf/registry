@@ -1,0 +1,25 @@
+schema = 1
+
+[template]
+name = "osuc-ipres"
+version = "2026.9.17"
+engine = "latex"
+title = "Informe iPre UC"
+description = "Report for undergraduate research (iPre) at UC Chile, for experimental or bibliographic work. In Spanish."
+authors = ["Open Source UC"]
+license = "MIT"
+repository = "https://github.com/open-source-uc/latex-templates"
+keywords = ["ipre", "investigacion", "informe", "puc", "osuc"]
+categories = ["report"]
+universities = ["UC Chile"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/open-source-uc/latex-templates"
+rev = "d1a013b291587fe566cfd299ae8ad1f3fc6ed12a"
+path = "templates/plantilla-iPres"
+exclude = []
+
+[latex]
+compiler = "pdflatex"
+bib = "none"

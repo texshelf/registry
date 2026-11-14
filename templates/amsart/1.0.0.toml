@@ -1,0 +1,30 @@
+schema = 1
+
+[template]
+name = "amsart"
+version = "1.0.0"
+engine = "latex"
+title = "AMS article"
+description = "Mathematics article using amsart, with theorem, definition and proof environments."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+keywords = ["ams", "mathematics", "theorem", "proof"]
+categories = ["journal", "article"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "4f8e2ab5a6e364aeed4227246326690254c3a7df"
+path = "amsart"
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"
+
+[variables.title]
+prompt = "Title"
+default = "An Example Title"
+files = ["main.tex"]
+
+[registry]
+official = true

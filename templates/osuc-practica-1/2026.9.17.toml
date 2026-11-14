@@ -1,0 +1,25 @@
+schema = 1
+
+[template]
+name = "osuc-practica-1"
+version = "2026.9.17"
+engine = "latex"
+title = "Informe de Práctica 1 UC"
+description = "Report for the first internship (Práctica 1) at UC Chile engineering. In Spanish."
+authors = ["Open Source UC"]
+license = "MIT"
+repository = "https://github.com/open-source-uc/latex-templates"
+keywords = ["practica", "ingenieria", "informe", "puc", "osuc"]
+categories = ["report"]
+universities = ["UC Chile"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/open-source-uc/latex-templates"
+rev = "d1a013b291587fe566cfd299ae8ad1f3fc6ed12a"
+path = "templates/plantilla-practica-1"
+exclude = []
+
+[latex]
+compiler = "pdflatex"
+bib = "biber"
