@@ -1,0 +1,47 @@
+name: Request a template
+description: A template that should be installable with texshelf
+title: "Add "
+labels: [template request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If the template is yours, `texshelf publish` adds it faster than an issue does.
+  - type: input
+    id: repo
+    attributes:
+      label: Where it lives
+      description: Git repository, CTAN page or Typst Universe page
+      placeholder: https://github.com/someone/thesis-template
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Engine
+      options:
+        - LaTeX
+        - Typst
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: Leave empty if you could not find one. Templates without a license cannot be added.
+  - type: input
+    id: university
+    attributes:
+      label: University or journal it is for
+      placeholder: UC Chile
+  - type: textarea
+    id: why
+    attributes:
+      label: Who would use it
+  - type: checkboxes
+    id: author
+    attributes:
+      label: Your relation to it
+      options:
+        - label: I am the author or a maintainer
+        - label: I can write the manifest and open the pull request

@@ -1,0 +1,34 @@
+name: Problem with a template
+description: Broken, outdated, wrong license or credit, or a request to remove it
+labels: [template problem]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Template and version
+      placeholder: phd-thesis 2026.4.28
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of problem
+      options:
+        - It does not compile
+        - A newer version exists upstream
+        - Wrong license, author or description
+        - I am the author and want it changed or removed
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: For compile errors, paste the first error and the output of `texshelf doctor`.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        If the template does something unsafe when compiled, report it privately under the Security tab instead.

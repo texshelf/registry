@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Add your own template
+    url: https://github.com/texshelf/texshelf/blob/main/docs/publishing.md
+    about: Run texshelf publish, or follow the guide to write the manifest by hand
+  - name: Problem with the texshelf or typshelf command
+    url: https://github.com/texshelf/texshelf/issues/new/choose
+    about: Bugs and feature requests for the CLI
+  - name: Report an unsafe template
+    url: https://github.com/texshelf/registry/security/advisories/new
+    about: Please report these privately

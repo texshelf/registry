@@ -54,6 +54,14 @@ credits its authors and keeps its license. The `article`, `slides`, `letter`,
 If you are the author of an imported template and want it changed or removed,
 open an issue and it will be done.
 
+## Taking part
+
+Not sure whether a template fits, or you know one but it is not yours? Open a
+[template request](https://github.com/texshelf/registry/issues/new/choose).
+The [contributing guide](https://github.com/texshelf/.github/blob/main/CONTRIBUTING.md)
+has the rest, and everyone taking part follows the
+[code of conduct](https://github.com/texshelf/.github/blob/main/CODE_OF_CONDUCT.md).
+
 ## License
 
 The manifests in this repository are released under CC0 1.0. The templates
