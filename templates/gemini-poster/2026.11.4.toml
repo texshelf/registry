@@ -1,0 +1,27 @@
+schema = 1
+
+[template]
+name = "gemini-poster"
+version = "2026.11.4"
+engine = "latex"
+title = "Gemini poster"
+description = "Landscape A0 research poster built on beamerposter, with colour themes for several universities."
+authors = ["Anish Athalye"]
+license = "MIT"
+keywords = ["beamer", "conference", "a0"]
+categories = ["poster"]
+entrypoint = "poster.tex"
+
+[source]
+repo = "https://github.com/anishathalye/gemini"
+rev = "8a8d4d40765d60ff2f2a9b98c7d9211b8ac8b46b"
+exclude = [".github/**"]
+
+[latex]
+compiler = "lualatex"
+bib = "biber"
+
+[variables.title]
+prompt = "Title"
+default = "Some fancy title: followed by some more text"
+files = ["poster.tex"]

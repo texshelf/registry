@@ -1,0 +1,58 @@
+name: Check
+
+on:
+  pull_request:
+    paths: ["templates/**"]
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    steps:
+      - name: Install system tools
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends git curl ca-certificates build-essential pkg-config poppler-utils
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: typst-community/setup-typst@v4
+
+      - name: Install texshelf-registry
+        run: cargo install --locked --git https://github.com/texshelf/texshelf texshelf-registry
+
+      - name: Validate every manifest
+        run: texshelf-registry check .
+
+      - name: Build the templates this pull request touches
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          names=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- templates | cut -d/ -f2 | sort -u)
+          if [ -z "$names" ]; then
+            echo "No template changed."
+            exit 0
+          fi
+          only=""
+          for name in $names; do
+            [ -d "templates/$name" ] && only="$only --only $name"
+          done
+          texshelf-registry build --out preview/v1 --strict $only
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: previews
+          path: |
+            preview/v1/t/**/preview.pdf
+            preview/v1/t/**/thumb.png
+          if-no-files-found: ignore

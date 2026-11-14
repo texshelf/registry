@@ -1,0 +1,28 @@
+schema = 1
+
+[template]
+name = "letter"
+version = "1.0.0"
+engine = "latex"
+title = "Letter"
+description = "One-page letter using the standard letter class."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+categories = ["letter"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "d51b3c80e8db9b47edb62429e29587bd29ddb3d4"
+path = "letter"
+
+[latex]
+compiler = "pdflatex"
+
+[variables.author]
+prompt = "Author"
+default = "A. U. Thor"
+files = ["main.tex"]
+
+[registry]
+official = true

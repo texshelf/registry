@@ -1,0 +1,34 @@
+schema = 1
+
+[template]
+name = "slides"
+version = "1.0.0"
+engine = "latex"
+title = "Beamer slides"
+description = "16:9 beamer talk that needs no theme packages beyond beamer itself."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+keywords = ["beamer", "talk", "slides"]
+categories = ["presentation"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "d51b3c80e8db9b47edb62429e29587bd29ddb3d4"
+path = "slides"
+
+[latex]
+compiler = "pdflatex"
+
+[variables.title]
+prompt = "Title"
+default = "An Example Talk"
+files = ["main.tex"]
+
+[variables.author]
+prompt = "Author"
+default = "A. U. Thor"
+files = ["main.tex"]
+
+[registry]
+official = true

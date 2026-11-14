@@ -1,0 +1,31 @@
+schema = 1
+
+[template]
+name = "tex-ast"
+version = "2026.10.28"
+engine = "latex"
+title = "TeX-AST lab report"
+description = "Informe de laboratorio para cursos de Astronomía y Física UC, basado en una clase AASTeX v7 modificada."
+authors = ["Juan José Sánchez Medina"]
+license = "LPPL-1.3c"
+keywords = ["astronomy", "aastex", "informe", "uc", "español"]
+categories = ["lab-report", "report"]
+entrypoint = "Main.tex"
+
+[source]
+repo = "https://github.com/jj-sm/TeX-AST"
+rev = "139c134d43d770333038b49661ccdbdfa09450d8"
+path = "LaTeX"
+exclude = ["Main.pdf"]
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"
+
+[variables.title]
+prompt = "Title"
+default = "Análisis de Espectros Estelares"
+files = ["Input.tex"]
+
+[registry]
+verified = true

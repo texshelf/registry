@@ -1,0 +1,21 @@
+schema = 1
+
+[template]
+name = "jakes-resume"
+version = "2020.9.14"
+engine = "latex"
+title = "Jake's Resume"
+description = "Single-page résumé in one file, widely used for software engineering applications."
+authors = ["Jake Gutierrez"]
+license = "MIT"
+keywords = ["resume", "one page", "software engineer"]
+categories = ["cv"]
+entrypoint = "resume.tex"
+
+[source]
+repo = "https://github.com/jakegut/resume"
+rev = "3e64a933141a7cda3a328f0743f73a201628a4ba"
+exclude = ["resume.png"]
+
+[latex]
+compiler = "pdflatex"

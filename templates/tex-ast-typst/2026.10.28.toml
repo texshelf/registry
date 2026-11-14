@@ -1,0 +1,21 @@
+schema = 1
+
+[template]
+name = "tex-ast-typst"
+version = "2026.10.28"
+engine = "typst"
+title = "TeX-AST lab report (Typst)"
+description = "Versión Typst del informe de laboratorio para cursos de Astronomía y Física UC."
+authors = ["Juan José Sánchez Medina"]
+license = "LPPL-1.3c"
+keywords = ["astronomy", "informe", "uc", "español"]
+categories = ["lab-report", "report"]
+entrypoint = "main.typ"
+
+[source]
+repo = "https://github.com/jj-sm/TeX-AST"
+rev = "139c134d43d770333038b49661ccdbdfa09450d8"
+path = "Typst"
+
+[registry]
+verified = true

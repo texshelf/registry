@@ -1,0 +1,35 @@
+schema = 1
+
+[template]
+name = "article"
+version = "1.0.0"
+engine = "latex"
+title = "Article"
+description = "Short article with sections, a table and a BibTeX bibliography."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+keywords = ["paper", "report", "basic"]
+categories = ["article"]
+entrypoint = "main.tex"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "d51b3c80e8db9b47edb62429e29587bd29ddb3d4"
+path = "article"
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"
+
+[variables.title]
+prompt = "Title"
+default = "An Example Title"
+files = ["main.tex"]
+
+[variables.author]
+prompt = "Author"
+default = "A. U. Thor"
+files = ["main.tex"]
+
+[registry]
+official = true

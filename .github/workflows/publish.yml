@@ -1,0 +1,12 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+    paths: ["templates/**"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: texshelf/web/.github/workflows/deploy.yml@main
+    secrets: inherit

@@ -1,0 +1,21 @@
+schema = 1
+
+[template]
+name = "homework"
+version = "2020.6.13"
+engine = "latex"
+title = "Homework"
+description = "Homework assignment with numbered problems, a course header and page-continuation marks."
+authors = ["Josh Davis"]
+license = "MIT"
+keywords = ["assignment", "problem set", "class"]
+categories = ["homework"]
+entrypoint = "homework.tex"
+
+[source]
+repo = "https://github.com/jdavis/latex-homework-template"
+rev = "e13596d5ae99c932d003208ec869245583108350"
+exclude = ["homework.pdf", "TODO.md"]
+
+[latex]
+compiler = "pdflatex"

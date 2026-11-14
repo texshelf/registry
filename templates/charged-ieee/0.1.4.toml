@@ -1,0 +1,24 @@
+schema = 1
+
+[template]
+name = "charged-ieee"
+version = "0.1.4"
+engine = "typst"
+title = "IEEE paper"
+description = "IEEE-style two-column paper for conferences and journals in engineering and computer science."
+authors = ["Typst GmbH"]
+license = "MIT-0"
+keywords = ["ieee", "conference", "two column"]
+categories = ["journal", "article"]
+entrypoint = "main.typ"
+universe = "charged-ieee"
+
+[source]
+repo = "https://github.com/typst/templates"
+rev = "71b01c6b0a828649c7a0a38e8167cd82aab76efc"
+path = "charged-ieee/template"
+
+[variables.title]
+prompt = "Title"
+default = "A Typesetting System to Untangle the Scientific Writing Process"
+files = ["main.typ"]

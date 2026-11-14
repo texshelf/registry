@@ -1,0 +1,22 @@
+schema = 1
+
+[template]
+name = "phd-thesis"
+version = "2026.4.28"
+engine = "latex"
+title = "PhD thesis (Cambridge)"
+description = "PhD thesis class following the Cambridge University Engineering Department guidelines, with chapters, appendices and a nomenclature."
+authors = ["Krishna Kumar"]
+license = "MIT"
+keywords = ["dissertation", "cambridge", "cued"]
+categories = ["thesis"]
+entrypoint = "thesis.tex"
+
+[source]
+repo = "https://github.com/kks32/phd-thesis-template"
+rev = "8d6c2d59790d93ef58e50f908d98d49e00b4fb1d"
+exclude = ["thesis.pdf", "thesis.ps", ".travis.yml"]
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"

@@ -1,0 +1,22 @@
+schema = 1
+
+[template]
+name = "arxiv-style"
+version = "2024.1.2"
+engine = "latex"
+title = "arXiv-style preprint"
+description = "Preprint layout based on the NIPS style, for papers posted to arXiv or bioRxiv."
+authors = ["George Kour"]
+license = "MIT"
+keywords = ["arxiv", "preprint", "paper"]
+categories = ["article"]
+entrypoint = "template.tex"
+
+[source]
+repo = "https://github.com/kourgeorge/arxiv-style"
+rev = "920514696f6e7270cab0558fd97c44515c63b4c4"
+exclude = ["template.pdf"]
+
+[latex]
+compiler = "pdflatex"
+bib = "bibtex"

@@ -1,0 +1,21 @@
+schema = 1
+
+[template]
+name = "awesome-cv"
+version = "2026.10.21"
+engine = "latex"
+title = "Awesome CV"
+description = "CV, résumé and cover letter with coloured section headings and icon contact details."
+authors = ["posquit0 (Claud D. Park)"]
+license = "LPPL-1.3c"
+keywords = ["resume", "curriculum vitae", "cover letter"]
+categories = ["cv"]
+entrypoint = "examples/resume.tex"
+
+[source]
+repo = "https://github.com/posquit0/Awesome-CV"
+rev = "dfe863541ccc6ea624c48338a7ce550494530b31"
+exclude = [".github/**", "docs/**", "tests/**", "Dockerfile", "icon.png", "examples/*.pdf", "examples/*-[0-9].png", "examples/awesome-cv.cls"]
+
+[latex]
+compiler = "lualatex"

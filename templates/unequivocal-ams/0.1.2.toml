@@ -1,0 +1,19 @@
+schema = 1
+
+[template]
+name = "unequivocal-ams"
+version = "0.1.2"
+engine = "typst"
+title = "AMS paper"
+description = "AMS-style paper for mathematics journals and conferences, with theorem and proof blocks."
+authors = ["Typst GmbH"]
+license = "MIT-0"
+keywords = ["ams", "mathematics", "theorem"]
+categories = ["journal", "article"]
+entrypoint = "main.typ"
+universe = "unequivocal-ams"
+
+[source]
+repo = "https://github.com/typst/templates"
+rev = "71b01c6b0a828649c7a0a38e8167cd82aab76efc"
+path = "unequivocal-ams/template"

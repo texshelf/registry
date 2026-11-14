@@ -1,0 +1,19 @@
+schema = 1
+
+[template]
+name = "appreciated-letter"
+version = "0.1.0"
+engine = "typst"
+title = "Letter (Typst)"
+description = "Business or personal letter with sender, recipient, subject line and signature."
+authors = ["Typst GmbH"]
+license = "MIT-0"
+keywords = ["correspondence", "business"]
+categories = ["letter"]
+entrypoint = "main.typ"
+universe = "appreciated-letter"
+
+[source]
+repo = "https://github.com/typst/templates"
+rev = "71b01c6b0a828649c7a0a38e8167cd82aab76efc"
+path = "appreciated-letter/template"

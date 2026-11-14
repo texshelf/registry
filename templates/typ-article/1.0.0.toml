@@ -1,0 +1,31 @@
+schema = 1
+
+[template]
+name = "typ-article"
+version = "1.0.0"
+engine = "typst"
+title = "Article (Typst)"
+description = "Short article with sections, a table and a bibliography, with no package imports."
+authors = ["Juan José Sánchez Medina"]
+license = "MIT"
+keywords = ["paper", "report", "basic"]
+categories = ["article"]
+entrypoint = "main.typ"
+
+[source]
+repo = "https://github.com/texshelf/templates"
+rev = "d51b3c80e8db9b47edb62429e29587bd29ddb3d4"
+path = "typ-article"
+
+[variables.title]
+prompt = "Title"
+default = "An Example Title"
+files = ["main.typ"]
+
+[variables.author]
+prompt = "Author"
+default = "A. U. Thor"
+files = ["main.typ"]
+
+[registry]
+official = true
