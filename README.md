@@ -15,9 +15,9 @@ Browse the result at [tex.jjsm.science](https://tex.jjsm.science).
 3. Run `texshelf validate templates/<name>/<version>.toml`.
 4. Open a pull request.
 
-The [manifest reference](https://github.com/texshelf/texshelf/blob/main/docs/manifest.md)
+The [manifest reference](https://github.com/texshelf/docs/blob/main/docs/manifest.md)
 describes every field, and the
-[publishing guide](https://github.com/texshelf/texshelf/blob/main/docs/publishing.md)
+[publishing guide](https://github.com/texshelf/docs/blob/main/docs/publishing.md)
 covers updates and local testing.
 
 To update a template, add a new version file. Published versions are not
